@@ -84,7 +84,7 @@ angular.module('ui-leaflet')
         leafletIterators.each(mapEvents, function(eventName) {
             var context = {};
             context[contextName] = eventName;
-            map.on(eventName, _genDispatchMapEvent(scope, eventName, logic, map._container.id || ''), context);
+            map.on(eventName, _genDispatchMapEvent(scope, eventName, logic, scope.mapId || ''), context);
         });
     };
 
